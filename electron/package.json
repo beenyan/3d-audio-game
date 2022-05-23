@@ -1,0 +1,40 @@
+{
+  "name": "3d-audio-game",
+  "version": "1.0.0",
+  "description": "3D物理聲音分析遊戲",
+  "main": "main.js",
+  "scripts": {
+    "pack": "electron-builder --dir",
+		"pack-dist": "electron-builder" ,
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "build": {
+    "appId": "com.electron.3d-audio-game",
+    "mac": {
+      "category": "com.electron.3d-audio-game"
+    },
+    "extraResources": [
+      {
+        "from": "../assets/",
+        "to": "assets",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "author": "BeenYan",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^18.2.4",
+    "electron-builder": "^23.0.3"
+  }
+}

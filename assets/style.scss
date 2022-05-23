@@ -1,0 +1,43 @@
+* {
+  user-select: none;
+  position: relative;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 800px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background-color: unset;
+  border: unset;
+  transition: 300ms color;
+  &:not(.active):hover {
+    color: rgb(255, 239, 210);
+    text-shadow: 1px 1px 1px black;
+  }
+  &.active {
+    color: rgb(75, 75, 255);
+  }
+  &.center {
+    transform: translate(-50%, -50%);
+  }
+}
+
+[v-cloak] {
+  display: none;
+}
